@@ -1,0 +1,20 @@
+# Allow-list the build input. Untracked source PDFs, private reports and ADC never enter the context.
+**
+!Dockerfile
+!backend/
+!backend/pyproject.toml
+!backend/uv.lock
+!backend/atlas/
+!backend/atlas/*.py
+!frontend/
+!frontend/package*.json
+!frontend/index.html
+!frontend/tsconfig.json
+!frontend/vite.config.ts
+!frontend/src/
+!frontend/src/*.ts
+!frontend/src/*.tsx
+!frontend/src/*.css
+frontend/src/*.test.ts
+!evaluation/
+!evaluation/candidates.json

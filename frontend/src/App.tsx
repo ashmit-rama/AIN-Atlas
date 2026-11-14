@@ -139,7 +139,7 @@ export default function App() {
   const [selectedEdge, setSelectedEdge] = useState<string | null>(null)
   const [versions, setVersions] = useState<Draft[]>([])
   const [sourceView, setSourceView] = useState<SourceView | null>(null)
-  const [sourceLanguage, setSourceLanguage] = useState('French')
+  const [sourceLanguage, setSourceLanguage] = useState('')
   const [derivedFrom, setDerivedFrom] = useState('')
   const [pageMapText, setPageMapText] = useState('{}')
   const [conflict, setConflict] = useState(false)
@@ -1004,7 +1004,7 @@ export default function App() {
                   <input
                     value={sourceLanguage}
                     onChange={(e) => setSourceLanguage(e.target.value)}
-                    placeholder="French"
+                    placeholder="e.g. French"
                   />
                 </label>
                 <label>
@@ -1238,13 +1238,11 @@ export default function App() {
                               </td>
                               <td>{Math.round(arm.latency_ms)} ms</td>
                               <td>
-                                {arm.model_calls}
-                                {arm.retries ? ` + ${arm.retries} retries` : ''}
+                                {arm.model_calls ?? 'Unknown'}
+                                {arm.retries ? ` (includes ${arm.retries} retry)` : ''}
                               </td>
                               <td>
-                                {arm.usage_complete
-                                  ? `${arm.input_tokens ?? 'unknown'} / ${arm.output_tokens ?? 'unknown'}`
-                                  : 'Unknown'}
+                                {`${arm.input_tokens ?? 'unknown'} / ${arm.output_tokens ?? 'unknown'}`}
                               </td>
                               <td>{arm.validation_passed ? 'Passed' : 'Failed'}</td>
                               <td>

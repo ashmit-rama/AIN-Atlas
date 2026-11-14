@@ -7,7 +7,7 @@
     Arial,
     sans-serif;
   color: #19313c;
-  background: #f1f4f1;
+  background: #f7f5ef;
   font-synthesis: none;
 }
 * {
@@ -562,7 +562,7 @@ p {
   min-height: 510px;
   flex: 1;
   position: relative;
-  background: #f8faf9;
+  background: #faf9f5;
 }
 .map-footer {
   height: 45px;

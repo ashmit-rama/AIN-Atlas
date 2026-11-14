@@ -101,8 +101,8 @@ export interface ComparisonArm {
   case_id: string
   status: 'succeeded' | 'failed'
   latency_ms: number
-  model_calls: number
-  retries: number
+  model_calls: number | null
+  retries: number | null
   input_tokens: number | null
   output_tokens: number | null
   usage_complete: boolean

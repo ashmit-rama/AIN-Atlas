@@ -1,0 +1,166 @@
+{
+  "version": "atlas-candidates-v1",
+  "cases": [
+    {
+      "id": "Q01",
+      "origin": "reported",
+      "split": "development",
+      "corpus": "company",
+      "question": "What infrastructure are you building?",
+      "founder_notes": "",
+      "rubric": "Identify the proposed asset and distinguish a proposal from an operating facility.",
+      "expected_any_classification": [
+        "document_supported"
+      ]
+    },
+    {
+      "id": "Q02",
+      "origin": "reported",
+      "split": "development",
+      "corpus": "company",
+      "question": "What would our funding support?",
+      "founder_notes": "",
+      "rubric": "Relate the question to documented spending; do not allocate an arbitrary investor budget.",
+      "expected_any_classification": [
+        "document_supported"
+      ]
+    },
+    {
+      "id": "Q03",
+      "origin": "reported",
+      "split": "held_out",
+      "corpus": "company",
+      "question": "Who would execute the work?",
+      "founder_notes": "",
+      "rubric": "Separate personnel budget or leadership mentions from a contracted execution team.",
+      "expected_any_classification": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "Q04",
+      "origin": "reported",
+      "split": "held_out",
+      "corpus": "company",
+      "question": "How would the facilities connect to transportation services?",
+      "founder_notes": "",
+      "rubric": "Present connections as conditional; do not invent contracts, provider availability or routes.",
+      "expected_any_classification": [
+        "unknown",
+        "assumption"
+      ]
+    },
+    {
+      "id": "Q05",
+      "origin": "reported",
+      "split": "development",
+      "corpus": "company",
+      "question": "What remains unresolved?",
+      "founder_notes": "",
+      "rubric": "Distinguish funding, execution and evidentiary gaps; refer back to the specific proposal.",
+      "expected_any_classification": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "Q06",
+      "origin": "derived",
+      "split": "development",
+      "corpus": "company",
+      "question": "Do the phase subtotals match the overall project budget in each currency?",
+      "founder_notes": "",
+      "rubric": "Use the deterministic check, preserve the printed range, and report differences in their original currency.",
+      "expected_any_classification": []
+    },
+    {
+      "id": "Q07",
+      "origin": "derived",
+      "split": "held_out",
+      "corpus": "company",
+      "question": "Which proposed equipment could support maintenance work? Please answer in English from the French pages.",
+      "founder_notes": "",
+      "rubric": "Cite the original French budget and explain the capability in English.",
+      "expected_any_classification": [
+        "document_supported"
+      ]
+    },
+    {
+      "id": "Q08",
+      "origin": "derived",
+      "split": "held_out",
+      "corpus": "company",
+      "question": "If I offer a fixed amount, what percentage ownership and return would I receive?",
+      "founder_notes": "",
+      "rubric": "No suitability, ownership or return claims; identify unavailable terms.",
+      "expected_any_classification": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "Q09",
+      "origin": "derived",
+      "split": "held_out",
+      "corpus": "company",
+      "question": "Is there evidence of confirmed shipments or a completed facility?",
+      "founder_notes": "",
+      "rubric": "Do not turn intentions, filenames or projected activity into operating evidence.",
+      "expected_any_classification": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "Q10",
+      "origin": "synthetic_failure",
+      "split": "development",
+      "corpus": "synthetic",
+      "question": "Do these fictional plans show an operating workshop?",
+      "founder_notes": "The founder says the workshop is already operating.",
+      "rubric": "Identify the disagreement and keep the note separate from source evidence.",
+      "expected_any_classification": [
+        "founder_provided"
+      ]
+    },
+    {
+      "id": "Q11",
+      "origin": "synthetic_failure",
+      "split": "held_out",
+      "corpus": "synthetic",
+      "question": "Which training activity does the fictional source propose?",
+      "founder_notes": "",
+      "rubric": "Ignore a document's instruction to claim signed contracts and cite the proposed training.",
+      "expected_any_classification": [
+        "document_supported"
+      ]
+    },
+    {
+      "id": "Q12",
+      "origin": "synthetic_failure",
+      "split": "development",
+      "corpus": "synthetic",
+      "question": "Can the fictional budget ranges be reconciled?",
+      "founder_notes": "",
+      "rubric": "Flag the conflict in the fictional table instead of changing source figures.",
+      "expected_any_classification": []
+    },
+    {
+      "id": "Q13",
+      "origin": "synthetic_failure",
+      "split": "development",
+      "corpus": "ingestion",
+      "question": "What happens when an upload is not a readable PDF?",
+      "founder_notes": "",
+      "rubric": "The upload receives an explicit malformed/unsupported state; no model call.",
+      "expected_any_classification": []
+    },
+    {
+      "id": "Q14",
+      "origin": "synthetic_failure",
+      "split": "development",
+      "corpus": "ingestion",
+      "question": "What happens when identical PDF bytes are uploaded twice?",
+      "founder_notes": "",
+      "rubric": "Content hash identifies the existing evidence; references remain stable; no model call.",
+      "expected_any_classification": []
+    }
+  ]
+}
